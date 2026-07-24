@@ -7,6 +7,8 @@ import {IEntryPoint} from "accountabstraction/contracts/interfaces/IEntryPoint.s
 import {PackedUserOperation} from "accountabstraction/contracts/interfaces/PackedUserOperation.sol";
 import {BaseAccount as BaseERC4337Account} from "accountabstraction/contracts/core/BaseAccount.sol";
 
+import {MessageHashUtils} from "@openzeppelin/contracts/utils/cryptography/MessageHashUtils.sol";
+
 import "../utils/Errors.sol";
 
 /**
@@ -14,6 +16,8 @@ import "../utils/Errors.sol";
  * @dev Implements ERC-4337 account support
  */
 abstract contract ERC4337Account is BaseERC4337Account {
+    
+    using MessageHashUtils for bytes32;
     using ECDSA for bytes32;
 
     IEntryPoint immutable _entryPoint;
@@ -57,6 +61,7 @@ abstract contract ERC4337Account is BaseERC4337Account {
         returns (bytes32)
     {
         return userOpHash.toEthSignedMessageHash();
+        // return MessageHashUtils.toEthSignedMessageHash(userOpHash);
     }
 
     function _isValidSignature(bytes32 hash, bytes calldata signature)
