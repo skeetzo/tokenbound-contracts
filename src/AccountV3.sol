@@ -92,7 +92,7 @@ contract AccountV3 is
         public
         view
         virtual
-        override(ERC6551Account, ERC6551Executor)
+        override(ERC1155Holder, ERC6551Account, ERC6551Executor)
         returns (bool)
     {
         bool interfaceSupported = super.supportsInterface(interfaceId);
