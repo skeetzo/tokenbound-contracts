@@ -1,25 +1,18 @@
 {
   "name": "@tokenbound/contracts",
   "version": "0.3.1-beta.0",
-  "submodules": [
-    "lib/account-abstraction",
-    "lib/erc6551",
-    "lib/forge-std",
-    "lib/multicall-authenticated",
-    "lib/openzeppelin-contracts"
-  ],
   "scripts": {
-    "postinstall": "submodules-install",
     "compile": "forge test",
     "format": "forge fmt",
     "lint": "solhint -w 0 'contracts/**/*.sol'",
     "prepublishOnly": "echo 'ERROR: Use script/publish.sh to publish' && exit 1"
   },
+  "dependencies": {
+    "erc6551": "github:erc6551/reference",
+    "@account-abstraction": "github:eth-infinitism/account-abstraction"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tokenbound/contracts.git"
-  },
-  "devDependencies": {
-    "submodules-install": "^1.1.0"
   }
 }
