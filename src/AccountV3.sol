@@ -5,7 +5,8 @@ import "@openzeppelin/contracts/utils/cryptography/SignatureChecker.sol";
 import "@openzeppelin/contracts/token/ERC721/utils/ERC721Holder.sol";
 import "@openzeppelin/contracts/token/ERC1155/utils/ERC1155Holder.sol";
 
-import "erc6551/lib/ERC6551AccountLib.sol";
+// import "erc6551/lib/ERC6551AccountLib.sol";
+import "erc6551/src/lib/ERC6551AccountLib.sol";
 
 import "./abstract/Lockable.sol";
 import "./abstract/Overridable.sol";
