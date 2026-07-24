@@ -31,6 +31,8 @@ abstract contract TokenboundExecutor is
         if (multicallForwarder == address(0)) revert InvalidMulticallForwarder();
     }
 
+    function _contextSuffixLength() internal view virtual override(ERC2771Context, Context) returns (uint256) {}
+
     function _msgSender()
         internal
         view
