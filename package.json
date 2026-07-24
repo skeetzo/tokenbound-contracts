@@ -8,8 +8,8 @@
     "prepublishOnly": "echo 'ERROR: Use script/publish.sh to publish' && exit 1"
   },
   "dependencies": {
-    "erc6551": "github:erc6551/reference",
-    "@account-abstraction": "github:eth-infinitism/account-abstraction"
+    "accountabstraction": "github:eth-infinitism/account-abstraction",
+    "erc6551": "github:erc6551/reference"
   },
   "repository": {
     "type": "git",
