@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.13;
 
-import "erc6551/lib/ERC6551AccountLib.sol";
+import "erc6551/src/lib/ERC6551AccountLib.sol";
 
 import "../utils/Errors.sol";
 import "../lib/LibSandbox.sol";

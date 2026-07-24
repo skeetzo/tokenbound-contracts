@@ -5,8 +5,7 @@ import "@openzeppelin/contracts/utils/cryptography/ECDSA.sol";
 
 import {IEntryPoint} from "@account-abstraction/contracts/interfaces/IEntryPoint.sol";
 import {UserOperation} from "@account-abstraction/contracts/interfaces/UserOperation.sol";
-import {BaseAccount as BaseERC4337Account} from
-    "@account-abstraction/contracts/core/BaseAccount.sol";
+import {BaseAccount as BaseERC4337Account} from "@account-abstraction/contracts/core/BaseAccount.sol";
 
 import "../utils/Errors.sol";
 

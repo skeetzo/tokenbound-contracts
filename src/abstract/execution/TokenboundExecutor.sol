@@ -3,9 +3,9 @@ pragma solidity ^0.8.13;
 
 import "@openzeppelin/contracts/metatx/ERC2771Context.sol";
 
-import "erc6551/interfaces/IERC6551Executable.sol";
-import "erc6551/interfaces/IERC6551Account.sol";
-import "erc6551/lib/ERC6551AccountLib.sol";
+import "erc6551/src/interfaces/IERC6551Executable.sol";
+import "erc6551/src/interfaces/IERC6551Account.sol";
+import "erc6551/src/lib/ERC6551AccountLib.sol";
 
 import "../../utils/Errors.sol";
 import "../../lib/LibExecutor.sol";
