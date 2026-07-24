@@ -211,7 +211,7 @@ contract AccountV3 is
         }
 
         ECDSA.RecoverError _error;
-        (signer, _error) = ECDSA.tryRecover(hash, signature);
+        (signer, _error, errorArg) = ECDSA.tryRecover(hash, signature);
 
         if (_error != ECDSA.RecoverError.NoError) return false;
 
