@@ -1,7 +1,15 @@
   {
   "name": "@tokenbound/contracts",
   "version": "0.3.1-beta.0",
+  "submodules": [
+    "submodules/account-abstraction",
+    "submodules/erc6551",
+    "submodules/forge-std",
+    "submodules/multicall-authenticated",
+    "submodules/openzeppelin-contracts"
+  ],
   "scripts": {
+    "postinstall": "submodules-install",
     "compile": "forge test",
     "format": "forge fmt",
     "lint": "solhint -w 0 'contracts/**/*.sol'",
